@@ -1,0 +1,23 @@
+<div class="col-md-6 mt-4">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">nombre</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Genero</th>
+        <th scope="col">Año</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let movie of movies">
+        <td>{{movie.name}}</td>
+        <td>{{movie.description}}</td>
+        <td>{{movie.genre}}</td>
+        <td>{{movie.year}}</td>
+        <td><a class="btn btn-primary btn-sm ml-0" routerLink="/formulario/{{movie.id}}">Editar</a></td>
+        <td><a class="btn btn-danger btn-sm" (click)="delete(movie.id)">Eliminar</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

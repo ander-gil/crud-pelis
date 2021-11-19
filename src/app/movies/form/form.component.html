@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="col-4">
+    <div class="row mt-4">
+      <div>
+        <div class="mb-1">
+          <input type="text" class="form-control" for="name" id="name" [(ngModel)]="movie.name" placeholder=" nombre de la pelicula">
+        </div>
+        <div class="mb-1">
+          <input type="text" [(ngModel)]="movie.duration" name="duration" class="form-control" id="exampleInputPassword1" placeholder="duración de la pelicula">
+        </div>
+        <div class="mb-1">
+          <input [(ngModel)]="movie.description" name="description" for="description" type="text" class="form-control" id="description" placeholder="descripcion de la pelicula">
+        </div>
+        <div class="mb-1">
+          <input [(ngModel)]="movie.genre" name="genre" for="gener" type="text" class="form-control" id="gener" placeholder="genero de la pelicula">
+        </div>
+        <div class="mb-1">
+          <input [(ngModel)]="movie.year" for="year" name="year" type="text" class="form-control" id="year" placeholder="año de la pelicula">
+        </div>
+        <div class="d-grid gap-2">
+          <button *ngIf="edit" class="btn btn-primary" (click)="agregar()">Editar</button>
+          <button *ngIf="edit==false" class="btn btn-primary" (click)="agregar()">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
